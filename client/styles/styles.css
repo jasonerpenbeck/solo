@@ -41,10 +41,9 @@ body {
 }
 
 .list-ads {
-  border: 1px solid blue;
-  width: 100px;
+
   height: 500px;
-  margin: 15%;
+  margin: 5%;
 }
 
 .palette {
@@ -67,4 +66,12 @@ body {
 
 .display {
   font: 16px "verdana" black;
+}
+
+.list-ad-items {
+ list-style-type: none;
+ list-style: none;
+ margin: 0px;
+ padding: 0px;
+ text-align: left;
 }
