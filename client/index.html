@@ -7,8 +7,8 @@
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<!--     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/> -->
-<!--     <script src="scripts/app.js"></script> -->
+    <script src="scripts/audition-app.js"></script>
+
   </head>
   <body>
 
@@ -28,14 +28,18 @@
 
       <div class="col-main">
         <div class = "text-entry">
-          <input type="text" placeholder="selector" value="" name="selector" class="selector">
+          <input type="text" placeholder="selector" value="" name="selector" class="form-entry-selector">
           <span class="text-period">.</span>
-          <input type="text" placeholder="verb" value="" name="verb" class="verb">
+          <input type="text" placeholder="verb" value="" name="verb" class="form-entry-verb">
           <button class="button-submit" name="button-submit">Make It Happen!</button>
         </div>
 
         <div class = "palette">Palette</div>
-        <div class = "creative">Make your ad here</div>
+        <div class = "creative">
+          <div class="display display-selector"></div>
+          <div class="display display-period">.</div>
+          <div class="display display-verb"></div>
+        </div>
       </div>
 
     </div>

@@ -64,3 +64,7 @@ body {
 .text-entry {
   padding-bottom: 20px;
 }
+
+.display {
+  font: 16px "verdana" black;
+}
