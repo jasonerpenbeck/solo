@@ -1,0 +1,66 @@
+body {
+    background: white;
+    text-align: center;
+    padding: 0px;
+    font-family: arial, sans-serif;
+    margin: 0px;
+}
+
+.title-audition {
+  font: 24px "verdana";
+  color: gray;
+}
+
+.nav-top {
+  width: 100%;
+/*   height: 60px; */
+  background: white;
+  border: 1px green solid;
+/*   position: fixed; */
+}
+
+
+.col-container {
+  width:100%;
+/*   height: 900px; */
+/*   clear:both; */
+}
+
+.col-left {
+  width: 15%;
+  height: inherit;
+  background: #ffffe0;
+  float: left;
+}
+
+.col-main {
+  width: 85%;
+  height: inherit;
+  background: #d1d1d1;
+  float: left;
+}
+
+.list-ads {
+  border: 1px solid blue;
+  width: 100px;
+  height: 500px;
+  margin: 15%;
+}
+
+.palette {
+  border: 1px solid pink;
+  width: 150px;
+  height: 400px;
+  float: left;
+}
+
+.creative {
+  border: 1px solid blue;
+  width: 400px;
+  height: 400px;
+  float: left;
+}
+
+.text-entry {
+  padding-bottom: 20px;
+}
