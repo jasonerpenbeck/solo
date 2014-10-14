@@ -6,6 +6,13 @@ body {
     margin: 0px;
 }
 
+button.button-submit {
+  font-size: 24px;
+  background-color: gray;
+  border: 0px;
+  color: white;
+}
+
 .title-audition {
   font: 24px "verdana";
   color: gray;
@@ -25,14 +32,15 @@ body {
 .col-left {
   width: 15%;
   height: inherit;
-  background: #ffffe0;
+/*   background: #ffffe0; */
   float: left;
+/*   border: 1px solid yellow; */
 }
 
 .col-main {
   width: 85%;
   height: inherit;
-  background: #d1d1d1;
+/*   background: #d1d1d1; */
   float: left;
 }
 
@@ -40,13 +48,17 @@ body {
 
   height: 500px;
   margin: 5%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .palette {
-  border: 1px solid pink;
+
   width: 150px;
   height: 400px;
   float: left;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .creative {
@@ -54,6 +66,22 @@ body {
   width: 400px;
   height: 400px;
   float: left;
+  text-align: center;
+
+  background: url('../images/HR-Logo-Without-Company-Name.png');
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+/*
+   background: url('https://hrhq.squarespace.com/assets/images/logo@2x.png');
+   background-size: 144px 40px;
+*/
+}
+
+.creative-text {
+  text-align: center;
+  line-height: 400px;
 }
 
 .text-entry {
@@ -86,7 +114,7 @@ body {
   width: 200px;
 }
 
-.upVote, .downVote {
+.upVote, .noVote, .downVote {
   width: 100%;
   color: white;
   border-radius: 10px;
@@ -97,10 +125,55 @@ body {
 
 .upVote {
   background-color: green;
-  border: 2px solid green;
+/*   border: 2px solid green; */
+}
+
+.noVote {
+  background-color: gray;
+/*   border: 2px solid black; */
 }
 
 .downVote {
   background-color: red;
-  border: 2px solid red;
+/*   border: 2px solid red; */
+}
+
+.form-entry {
+  font-size: 32px;
+}
+
+.text-entry {
+  padding-top: 10px;
+}
+
+.view-badge {
+  background-color: silver;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid silver;
+  margin-left: 5px;
+}
+
+.adDisplayArea {
+  width: 85%;
+  float: left;
+  width: auto;
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+
+.palette header {
+  font-weight: bold;
+}
+
+.palette-small-box {
+  width: 20px;
+  height: 20px;
+  float: left;
+   list-style-type: none;
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+
 }
