@@ -165,11 +165,13 @@ button.button-submit {
 
 .palette header {
   font-weight: bold;
+  clear: both;
+  padding-top: 20px;
 }
 
 .palette-small-box {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   float: left;
    list-style-type: none;
    list-style: none;
