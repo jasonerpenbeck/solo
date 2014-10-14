@@ -13,17 +13,13 @@ body {
 
 .nav-top {
   width: 100%;
-/*   height: 60px; */
   background: white;
   border: 1px green solid;
-/*   position: fixed; */
 }
 
 
 .col-container {
   width:100%;
-/*   height: 900px; */
-/*   clear:both; */
 }
 
 .col-left {
@@ -65,7 +61,7 @@ body {
 }
 
 .display {
-  font: 16px "verdana" black;
+/*   font: 16px "verdana" black; */
 }
 
 .list-ad-items {
@@ -74,4 +70,37 @@ body {
  margin: 0px;
  padding: 0px;
  text-align: left;
+}
+
+.link-ad {
+  text-decoration: none;
+}
+
+.link-container {
+  width: 100%;
+  padding: 10px 2px 5px 2px;
+}
+
+.voting {
+  float: left;
+  width: 200px;
+}
+
+.upVote, .downVote {
+  width: 100%;
+  color: white;
+  border-radius: 10px;
+  margin-left: 25px;
+  margin-top: 50px;
+  font-size: 36px;
+}
+
+.upVote {
+  background-color: green;
+  border: 2px solid green;
+}
+
+.downVote {
+  background-color: red;
+  border: 2px solid red;
 }
