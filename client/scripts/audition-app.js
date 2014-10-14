@@ -9,7 +9,7 @@ var parseSettings = {
   address : 'https://api.parse.com/1/classes/Ad'
 };
 
-var stylings = {
+var styling = styling || {
   adUnitBackgroundColor: 'blue',
   adUnitFontColor:'white',
   adUnitLogo: 'HackReactor',
@@ -179,8 +179,6 @@ var adArray;
 // jQuery stuff
 $(document).ready(function() {
 
-  $()
-
   // Initialize Background Palette
   for(var x=0;x<basicBackgroundColorPalette.length;x++) {
     $('.palette-background').append('<li class="palette-small-box" style="background-color:'+ basicBackgroundColorPalette[x] +' ">');
@@ -196,12 +194,12 @@ $(document).ready(function() {
     var $element = $(this);
     console.log($element.attr('style').split(':')[1]);
     var clickedColor = $element.attr('style').split(':')[1].trim();
-    stylings.adUnitBackgroundColor = clickedColor;
+    styling.adUnitBackgroundColor = clickedColor;
 /*     console.log(clickedColor); */
     $('.creative').removeAttr('style').css({
-      'background-color': stylings.adUnitBackgroundColor,
-      'color': stylings.adUnitFontColor,
-      'font-size': stylings.adUnitFontSize
+      'background-color': styling.adUnitBackgroundColor,
+      'color': styling.adUnitFontColor,
+      'font-size': styling.adUnitFontSize
       });
 
   });
@@ -211,12 +209,12 @@ $(document).ready(function() {
     var $element = $(this);
     console.log($element.attr('style').split(':')[1]);
     var clickedColor = $element.attr('style').split(':')[1].trim();
-    stylings.adUnitFontColor = clickedColor;
-     console.log(stylings.adUnitFontColor);
+    styling.adUnitFontColor = clickedColor;
+     console.log(styling.adUnitFontColor);
     $('.creative').removeAttr('style').css({
-      'background-color': stylings.adUnitBackgroundColor,
-      'color': stylings.adUnitFontColor,
-      'font-size': stylings.adUnitFontSize
+      'background-color': styling.adUnitBackgroundColor,
+      'color': styling.adUnitFontColor,
+      'font-size': styling.adUnitFontSize
       });
 
   });
@@ -228,9 +226,9 @@ $(document).ready(function() {
   $('.noVote').text('Meh.  What\'s next?');
   $('.downVote').text('This... this sucks.');
 
-  $('.creative').css({'background-color': stylings.adUnitBackgroundColor,
-  'color': stylings.adUnitFontColor,
-  'font-size': stylings.adUnitFontSize});
+  $('.creative').css({'background-color': styling.adUnitBackgroundColor,
+  'color': styling.adUnitFontColor,
+  'font-size': styling.adUnitFontSize});
 
   // load ads
   getAds(listAds);
@@ -296,13 +294,7 @@ var sendAd = function (ad, callback) {
         selector: ad.selectorValue,
         verb: ad.verbValue,
         adText: ad.adTextValue,
-        styling: {
-          adUnitBackgroundColor: 'blue',
-          adUnitFontColor:'white',
-          adUnitLogo: 'HackReactor',
-          adUnitLogoPlacement: 'bottom-right',
-          adUnitFontSize: '32px'
-        },
+        styling: styling,
         urlCode: ad.adTextValue,
         upVote: 0,
         downVote: 0,
@@ -410,13 +402,21 @@ var displayAd = function(adObject) {
   var verbDisplay = adObject.verb/*  || $('input.form-entry-verb').val() */;
 
   console.log(adObject.objectId);
-
+  console.log(adObject.styling);
+  styling = adObject.styling;
+  console.log(styling);
 
   $('.creative').data('special-link',adObject.objectId);
   $('.upVote').data('special-link',adObject.objectId);
   $('.downVote').data('special-link',adObject.objectId);
   $('.noVote').data('special-link',adObject.objectId);
     console.log($('.creative').data());
+
+  $('.creative').removeAttr('style').css({
+  'background-color': styling.adUnitBackgroundColor,
+  'color': styling.adUnitFontColor,
+  'font-size': styling.adUnitFontSize
+  });
 
     if(selectorDisplay === '') {
       $('.creative-text').text('').append('.' +verbDisplay);
